@@ -4,4 +4,47 @@
 @import 'libs';
 @import 'global';
 
+.header{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
+    &__btn{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+}
 
+.logo{
+    margin: 0, auto;
+}
+
+/* .menu{
+    padding-left: 35px; //cлева и справа от about gallery
+    padding-right: 60px;
+    &__list{
+        display: flex;
+    }
+    &__list-item + .menu__list-item{
+        padding-left: 80px; //Применяется ко второму элементу
+    }
+} */
+.menu{
+    padding-right: 15px;
+    &__list{
+        display: flex;
+    }
+    &__list-item {
+        padding-right: 45px; //расстояние между about gallery 45+35
+        padding-left: 35px; 
+    }
+    &__list-link{
+        @extend %title-font; //переменная из _vars
+        color: rgba(54, 56, 56, 0.9033);
+        line-height: 22px;
+    }
+}
